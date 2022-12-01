@@ -2,11 +2,16 @@ import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
-public class FileReeder {
+
+
+
+
+public class FileSearcher {
     public static void main(String args[]) {
 
         File file;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Type in your command, pattern, file:");
         String input = sc.nextLine();
         String[] inputs = input.split(" ");
         String command = inputs[0];
@@ -27,6 +32,9 @@ public class FileReeder {
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             }
+        }else{
+
+            System.out.println("The only command available is \"search\", please try again");
         }
         sc.close();
     }
